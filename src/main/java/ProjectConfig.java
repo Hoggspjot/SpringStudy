@@ -10,4 +10,15 @@ public class ProjectConfig {
         p.setName("Koko");
         return p;
     }
+
+    @Bean
+    String hello() {
+        return "Hello";
+    }
+
+    @Bean
+    Integer ten() {
+        return 10;
+    }
+
 }
