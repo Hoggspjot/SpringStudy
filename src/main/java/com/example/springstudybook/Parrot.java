@@ -1,3 +1,8 @@
+package com.example.springstudybook;
+
+import org.springframework.stereotype.Component;
+
+@Component
 public class Parrot {
     private String name;
 
