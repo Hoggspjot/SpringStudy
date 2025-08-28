@@ -1,3 +1,5 @@
+import beans.Parrot;
+import beans.Person;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
