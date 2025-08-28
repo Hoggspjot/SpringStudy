@@ -1,10 +1,12 @@
 
-import org.springframework.beans.factory.annotation.Qualifier;
+import beans.Parrot;
+import beans.Person;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-
+@ComponentScan(basePackages = "beans")
 public class Config {
 
     @Bean
@@ -21,15 +23,4 @@ public class Config {
         return p;
     }
 
-
-//    С помощью аннотации @Qualifier
-//    можно явно выразить свое
-//    намерение внедрить определенный бин из контекста
-    @Bean
-    public Person person(@Qualifier("parrot2") Parrot parrot) {
-        Person p = new Person();
-        p.setName("Ella");
-        p.setParrot(parrot);
-        return p;
-    }
 }

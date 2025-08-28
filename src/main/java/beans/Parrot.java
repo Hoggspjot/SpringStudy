@@ -1,4 +1,4 @@
-import org.springframework.stereotype.Component;
+package beans;
 
 
 public class Parrot {
@@ -15,6 +15,6 @@ public class Parrot {
 
     @Override
     public String toString() {
-        return "Parrot : "+ name;
+        return "beans.Parrot : "+ name;
     }
 }

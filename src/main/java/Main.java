@@ -1,3 +1,5 @@
+import beans.Parrot;
+import beans.Person;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
@@ -13,6 +15,6 @@ public class Main {
         System.out.println(person.getName());
         System.out.println(parrot.getName());
 
-        System.out.println("Person "+person.getName()+" "+ person.getParrot());
+        System.out.println("beans.Person "+person.getName()+" "+ person.getParrot());
     }
 }

@@ -1,13 +1,14 @@
-import org.springframework.beans.factory.annotation.Autowired;
+package beans;
+
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Person {
     private String name = "Ella";
-    private Parrot parrot;
+    private final Parrot parrot;
 
-
-    public void setParrot(Parrot parrot) {
+    public Person(@Qualifier("parrot2") Parrot parrot) {
         this.parrot = parrot;
     }
 
