@@ -5,16 +5,17 @@ import org.springframework.context.annotation.Configuration;
 public class Config {
 
     @Bean
-    public Parrot parrot() {
-        Parrot p = new Parrot();
-        p.setName("Koko");
+    public Person person() {
+        Person p = new Person();
+        p.setName("Ella");
+        p.setParrot(parrot());
         return p;
     }
 
     @Bean
-    public Person person() {
-        Person p = new Person();
-        p.setName("Ella");
+    public Parrot parrot() {
+        Parrot p = new Parrot();
+        p.setName("Koko");
         return p;
     }
 

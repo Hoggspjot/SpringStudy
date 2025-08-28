@@ -12,7 +12,7 @@ public class Main {
 
         System.out.println(person.getName());
         System.out.println(parrot.getName());
-        //Убеждаемся что связь не установлена
+
         System.out.println(person.getParrot());
     }
 }

@@ -5,6 +5,10 @@ public class Parrot {
         return name;
     }
 
+    public Parrot() {
+        System.out.println("Вызов конструктора попугая");
+    }
+
     public void setName(String name) {
         this.name = name;
     }
