@@ -13,6 +13,6 @@ public class Main {
         System.out.println(person.getName());
         System.out.println(parrot.getName());
 
-        System.out.println(person.getParrot());
+        System.out.println("Person "+person.getName()+" "+ person.getParrot());
     }
 }
