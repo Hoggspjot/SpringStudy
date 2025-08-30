@@ -11,6 +11,8 @@
   <url>http://maven.apache.org</url>
 
   <properties>
+    <maven.compiler.source>24</maven.compiler.source>
+    <maven.compiler.target>24</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -21,7 +23,6 @@
       <artifactId>spring-context</artifactId>
       <version>6.1.12</version>
     </dependency>
-
 
     <dependency>
       <groupId>javax.annotation</groupId>
