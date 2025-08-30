@@ -1,15 +1,10 @@
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import services.CommentService;
 
 @Configuration
+@ComponentScan(basePackages = {"repositories", "services"})
 public class Config {
-
-
-    @Bean
-    public CommentService commentService() {
-        return new CommentService();
-    }
-
 
 }

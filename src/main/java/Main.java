@@ -1,5 +1,6 @@
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import services.CommentService;
+import services.UserService;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,11 +8,10 @@ public class Main {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(Config.class);
 
-        CommentService cs1 = context.getBean("commentService", CommentService.class);
-        CommentService cs2 = context.getBean("commentService", CommentService.class);
+        CommentService s1 = context.getBean(CommentService.class);
+        UserService s2 = context.getBean(UserService.class);
 
-        boolean b1 = cs1 == cs2;
-        System.out.println(b1);
-
+        boolean b = s1.getCommentRepository() == s2.getCommentRepository();
+        System.out.println(b);
     }
 }

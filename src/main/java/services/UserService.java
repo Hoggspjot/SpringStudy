@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import repositories.CommentRepository;
 
 @Component
-public class CommentService {
+public class UserService {
 
     @Autowired
     private CommentRepository commentRepository;
