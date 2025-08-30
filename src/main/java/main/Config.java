@@ -11,23 +11,9 @@ import repositories.DBCommentRepository;
 import services.CommentService;
 
 @Configuration
-@ComponentScan
+@ComponentScan(basePackages = {"proxies", "repositories", "services"}
+        )
 public class Config {
 
-    @Bean
-    public CommentNotificationProxy commentNotificationProxy() {
-        return new EmailCommentNotificationProxy();
-    }
 
-    @Bean
-    public CommentRepository commentRepository() {
-        return new DBCommentRepository();
-    }
-
-    @Bean
-    public CommentService commentService(CommentRepository commentRepository,
-                                         CommentNotificationProxy commentNotificationProxy) {
-
-        return new CommentService(commentRepository, commentNotificationProxy);
-    }
 }

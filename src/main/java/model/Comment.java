@@ -1,5 +1,8 @@
 package model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Comment {
     private String author;
     private String text;

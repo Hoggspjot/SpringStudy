@@ -7,12 +7,13 @@ import proxies.CommentNotificationProxy;
 import repositories.CommentRepository;
 
 
-
+@Component
 public class CommentService {
 
-    private CommentRepository commentRepository;
-    private CommentNotificationProxy commentNotificationProxy;
+    private final CommentRepository commentRepository;
+    private final CommentNotificationProxy commentNotificationProxy;
 
+    @Autowired
     public CommentService(CommentRepository commentRepository, CommentNotificationProxy commentNotificationProxy) {
         this.commentRepository = commentRepository;
         this.commentNotificationProxy = commentNotificationProxy;
