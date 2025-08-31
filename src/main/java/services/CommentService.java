@@ -12,10 +12,11 @@ import repositories.CommentRepository;
 @Scope(BeanDefinition.SCOPE_PROTOTYPE)
 public class CommentService {
 
+    @Autowired
     private final CommentRepository commentRepository;
 
 
-    @Autowired
+
     public CommentService(CommentRepository commentRepository) {
         System.out.println("CommentService instance created!");
         this.commentRepository = commentRepository;

@@ -13,5 +13,7 @@ public class Main {
         CommentService cs2 = context.getBean(CommentService.class);
 
         System.out.println(cs1 == cs2);
+
+        System.out.println(cs1.getCommentRepository() == cs2.getCommentRepository());
     }
 }
