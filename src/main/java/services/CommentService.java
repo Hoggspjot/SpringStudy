@@ -2,14 +2,19 @@ package services;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import repositories.CommentRepository;
 
-@Component
+@Service
 public class CommentService {
 
+    private final CommentRepository commentRepository;
+
     @Autowired
-    private CommentRepository commentRepository;
+    public CommentService(CommentRepository commentRepository) {
+        System.out.println("CommentService instance created!");
+        this.commentRepository = commentRepository;
+    }
 
     public CommentRepository getCommentRepository() {
         return commentRepository;
