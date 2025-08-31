@@ -8,11 +8,10 @@ public class Main {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(Config.class);
 
-        System.out.println("Before");
 
-        // В этой строке Spring должен предоставить ссылку на бин
-        //CommentService поэтому Spring кго создает в этот момент
-        CommentService c = context.getBean(CommentService.class);
-        System.out.println("after");
+        CommentService cs1 = context.getBean(CommentService.class);
+        CommentService cs2 = context.getBean(CommentService.class);
+
+        System.out.println(cs1 == cs2);
     }
 }
