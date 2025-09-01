@@ -24,9 +24,14 @@ public class LoggingAspect {
                     " with parameters " + Arrays.asList(arguments)+
                     " will execute");
 
-            Object returnedByMethod = joinPoint.proceed();
+            Comment comment = new Comment();
+            comment.setText("Some other text");
+
+            Object[] newArgs = {comment};
+
+            Object returnedByMethod = joinPoint.proceed(newArgs);
             logger.info("Method executed and returned - "+ returnedByMethod);
-            return returnedByMethod;
+            return "FAILED";
         } catch (Throwable e) {
             throw new RuntimeException(e);
         }
