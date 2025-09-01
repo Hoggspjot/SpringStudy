@@ -11,8 +11,9 @@ public class CommentService {
     Logger logger = Logger.getLogger(CommentService.class.getName());
 
 
-    public void publishComment(Comment comment) {
+    public String publishComment(Comment comment) {
         logger.info("Publishing comment " + comment.getText());
+        return "SUCCESS";
     }
 
 }
