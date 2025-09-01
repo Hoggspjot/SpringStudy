@@ -1,5 +1,5 @@
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContextExtensionsKt;
 import services.Comment;
 import services.CommentService;
 

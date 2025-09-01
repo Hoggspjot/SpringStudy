@@ -1,5 +1,6 @@
 package services;
 
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Service;
 
 import java.util.logging.Logger;
@@ -11,7 +12,7 @@ public class CommentService {
 
 
     public void publishComment(Comment comment) {
-        logger.info("Publishing comment" + comment.getText());
+        logger.info("Publishing comment " + comment.getText());
     }
 
 }
