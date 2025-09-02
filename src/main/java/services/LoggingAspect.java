@@ -14,7 +14,7 @@ public class LoggingAspect {
 
     private Logger logger = Logger.getLogger(LoggingAspect.class.getName());
 
-    @Around("execution(* services.*.*(..))")
+    @Around("@annotation(services.ToLog)")
     public Object log(ProceedingJoinPoint joinPoint) {
         try {
             String methodName = joinPoint.getSignature().getName();

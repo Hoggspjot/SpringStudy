@@ -17,7 +17,6 @@ public class Main {
         comment.setText("Demo comment");
         comment.setAuthor("Vasya");
 
-       String value = cs.publishComment(comment);
-       logger.info(value);
+        cs.deleteComment(comment);
     }
 }
