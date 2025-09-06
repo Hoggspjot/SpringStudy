@@ -16,7 +16,6 @@ public class Main {
         Comment comment = new Comment();
         comment.setText("Demo comment");
         comment.setAuthor("Vasya");
-
-        cs.deleteComment(comment);
+        cs.publishComment(comment);
     }
 }

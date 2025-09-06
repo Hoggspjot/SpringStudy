@@ -14,24 +14,13 @@ public class LoggingAspect {
 
     private Logger logger = Logger.getLogger(LoggingAspect.class.getName());
 
-    @Around("@annotation(services.ToLog)")
+    @Around(value = "@annotation(services.ToLog)")
     public Object log(ProceedingJoinPoint joinPoint) {
         try {
-            String methodName = joinPoint.getSignature().getName();
-            Object[] arguments = joinPoint.getArgs();
-
-            logger.info("Method "+ methodName +
-                    " with parameters " + Arrays.asList(arguments)+
-                    " will execute");
-
-            Comment comment = new Comment();
-            comment.setText("Some other text");
-
-            Object[] newArgs = {comment};
-
-            Object returnedByMethod = joinPoint.proceed(newArgs);
-            logger.info("Method executed and returned - "+ returnedByMethod);
-            return "FAILED";
+            logger.info("Logging aspect : Calling the intercepted method");
+            Object returnedValue = joinPoint.proceed();
+            logger.info("Logging Aspect : Method executed and returned: " + returnedValue);
+            return returnedValue;
         } catch (Throwable e) {
             throw new RuntimeException(e);
         }
